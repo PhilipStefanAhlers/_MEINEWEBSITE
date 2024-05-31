@@ -1,0 +1,15 @@
+body {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+#slidecontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.slideimage {
+    margin: auto;
+    height: 30rem;
+}

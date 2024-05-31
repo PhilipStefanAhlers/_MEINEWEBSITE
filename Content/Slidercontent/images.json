@@ -1,0 +1,59 @@
+{
+    "images": [
+        {
+            "imagelocation": "Content\/Slidercontent\/cat.jpg",
+            "Date": "6.5.2024",
+            "Discription": "This is a cat that looks surprised lol",
+            "tags": {
+                "illustration": null,
+                "3d": null,
+                "digital": "digital",
+                "tradtional": "traditional"
+            }
+        },
+        {
+            "imagelocation": "Content\/Slidercontent\/cat2.jpeg",
+            "Date": "jhdfgjurzhf",
+            "Discription": "ertrggeg",
+            "tags": {
+                "illustration": null,
+                "3d": "3d",
+                "digital": "digital",
+                "tradtional": null
+            }
+        },
+        {
+            "imagelocation": "Content\/Slidercontent\/Screenshot_20240411_135610_Chrome.jpg",
+            "Date": "7.Mai.2024",
+            "Discription": "Cute Kitty very Cute",
+            "tags": {
+                "illustration": null,
+                "3d": "3d",
+                "digital": "digital",
+                "tradtional": null
+            }
+        },
+        {
+            "imagelocation": "Content\/Slidercontent\/cat3.jpg",
+            "Date": "7.5.2024",
+            "Discription": "Funny Looking Cat",
+            "tags": {
+                "illustration": "illustration",
+                "3d": null,
+                "digital": "digital",
+                "tradtional": null
+            }
+        },
+        {
+            "imagelocation": "Content\/Slidercontent\/cat4.jpg",
+            "Date": "trzr5z",
+            "Discription": "5z56uze6u",
+            "tags": {
+                "illustration": "illustration",
+                "3d": null,
+                "digital": null,
+                "tradtional": "traditional"
+            }
+        }
+    ]
+}

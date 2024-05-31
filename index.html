@@ -1,0 +1,85 @@
+<!--php -S localhost:8080 // Terminal Command for testing-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="slidercontent.js" defer></script>
+
+</head>
+
+<body onload="getjson()">
+    <header>
+        <h1>Philip Stefan Ahlers</h1>
+        <nav>
+            <a href="index.html#projects">Projekts</a>
+            <a href="index.html#aboutme">About me</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!--Lightbox zu Upload von Bildern-->
+    <div id="upload">
+        <form action="imageupload.php" method="POST" enctype="multipart/form-data">
+            Select Image:<input type="file" name="imageUpload" id="imageUpload"><br>
+            Date:<input type="text" name="imageDate"><br>
+            Discription:<input type="text" name="imageDiscription"><br>
+            Tags: <br>
+            <label for="illustration">illustration</label><input type="checkbox" name="illustration"
+                value="illustration"> <br>
+            <label for="3d">3d</label><input type="checkbox" name="3d" value="3d"> <br>
+            <label for="digital">digital</label><input type="checkbox" name="digital" value="digital"> <br>
+            <label for="traditional">traditional</label><input type="checkbox" name="traditional" value="traditional">
+            <br>
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
+    </div>
+
+    <section>
+        <h2 id="projects">Projects</h2>
+        <!--Filter-->
+        <div id="Filtertags">
+            Select Filters:<br>
+            illustration: <input type="checkbox" value="illustration" checked onchange="checkCheckboxes(this)">
+            3d: <input type="checkbox" ion value="3d" checked onchange="checkCheckboxes(this)">
+            digital: <input type="checkbox" value="digital" checked onchange="checkCheckboxes(this)">
+            traditional: <input type="checkbox" value="traditional" checked onchange="checkCheckboxes(this)">
+        </div>
+        <!--Slider-->
+        <div id="SlideContainer">
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">prev</a>
+        <a class="next" onclick="plusSlides(1)">next</a>
+
+        <article id="projectinformation">
+            Informationen zu den Projekten
+        </article>
+    </section>
+
+    <section>
+        <h2 id="aboutme">About me</h2>
+        <article>
+            Wer bin ich
+        </article>
+    </section>
+
+    <section>
+        <h2 id="contact">Contact</h2>
+        <article>
+            Kontaktformula
+        </article>
+    </section>
+
+    <footer>
+        Sozialemedien
+    </footer>
+
+</body>
+
+</html>
