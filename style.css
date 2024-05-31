@@ -1,8 +1,17 @@
+:root {
+    --red: #FF2000;
+    --pink: #FF00C6;
+    --lightgreen: #00FF2E;
+    --darkgreen: #648C6B;
+    --darkred: #452723;
+}
+
+
 body {
     margin: 0%;
     box-sizing: border-box;
 
-    background-color: #452723;
+    background-color: var(--darkred);
 }
 
 
