@@ -3,7 +3,8 @@
     --pink: #FF00C6;
     --lightgreen: #00FF2E;
     --darkgreen: #648C6B;
-    --darkred: #452723;
+    --darkred: #151211;
+    --white: #FFFFFF;
 }
 
 
@@ -12,6 +13,7 @@ body {
     box-sizing: border-box;
 
     background-color: var(--darkred);
+    color: var(--white);
 }
 
 

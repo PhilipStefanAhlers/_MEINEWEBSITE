@@ -54,6 +54,17 @@
                 "digital": null,
                 "tradtional": "traditional"
             }
+        },
+        {
+            "imagelocation": "Content\/Slidercontent\/images.jpeg",
+            "Date": "3.6.2024",
+            "Discription": "das ist ein Katzen Meme",
+            "tags": {
+                "illustration": "illustration",
+                "3d": null,
+                "digital": null,
+                "tradtional": "traditional"
+            }
         }
     ]
 }

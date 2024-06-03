@@ -25,16 +25,21 @@
     <!--Lightbox zu Upload von Bildern-->
     <div id="upload">
         <form action="imageupload.php" method="POST" enctype="multipart/form-data">
-            Select Image:<input type="file" name="imageUpload" id="imageUpload"><br>
-            Date:<input type="text" name="imageDate"><br>
-            Discription:<input type="text" name="imageDiscription"><br>
-            Tags: <br>
-            <label for="illustration">illustration</label><input type="checkbox" name="illustration"
-                value="illustration"> <br>
-            <label for="3d">3d</label><input type="checkbox" name="3d" value="3d"> <br>
-            <label for="digital">digital</label><input type="checkbox" name="digital" value="digital"> <br>
-            <label for="traditional">traditional</label><input type="checkbox" name="traditional" value="traditional">
-            <br>
+            <label for="imageUpload">Select Image:</label><input type="file" name="imageUpload" id="imageUpload"
+                required><br>
+            <label for="imageDate">Date:</label><input type="text" id="imageDate" name="imageDate" required><br>
+            <label for="imageDiscription">Discription:</label><input type="text" id="imageDiscription"
+                name="imageDiscription" required><br>
+            <fieldset>
+                <legend>Tags</legend>
+                <label for="illustration">illustration</label><input type="checkbox" id="illustration" name="tagselect"
+                    value="illustration">
+                <label for="3d">3d</label><input type="checkbox" id="3d" name="tagselect" value="3d">
+                <label for="digital">digital</label><input type="checkbox" id="digital" name="tagselect"
+                    value="digital">
+                <label for="traditional">traditional</label><input type="checkbox" id="traditional" name="tagselect"
+                    value="traditional">
+            </fieldset>
             <input type="submit" value="Upload Image" name="submit">
         </form>
     </div>
@@ -43,11 +48,17 @@
         <h2 id="projects">Projects</h2>
         <!--Filter-->
         <div id="Filtertags">
-            Select Filters:<br>
-            illustration: <input type="checkbox" value="illustration" checked onchange="checkCheckboxes(this)">
-            3d: <input type="checkbox" ion value="3d" checked onchange="checkCheckboxes(this)">
-            digital: <input type="checkbox" value="digital" checked onchange="checkCheckboxes(this)">
-            traditional: <input type="checkbox" value="traditional" checked onchange="checkCheckboxes(this)">
+            <fieldset>
+                <legend>Select Filters</legend>
+                <label for="illustration">Illustration:</label> <input type="checkbox" id="illustration"
+                    value="illustration" checked onchange="checkCheckboxes(this)">
+                <label for="3d">3D:</label><input type="checkbox" id="3d" value="3d" checked
+                    onchange="checkCheckboxes(this)">
+                <label for="digital">Digital:</label><input type="checkbox" id="digital" value="digital" checked
+                    onchange="checkCheckboxes(this)">
+                <label for="traditional">Traditional:</label><input type="checkbox" id="traditional" value="traditional"
+                    checked onchange="checkCheckboxes(this)">
+            </fieldset>
         </div>
         <!--Slider-->
         <div id="SlideContainer">
