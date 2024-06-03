@@ -121,3 +121,13 @@ function checkCheckboxes(clickedCheckbox) {
     }
     showSlides(0, 1);
 }
+
+
+
+function openLightbox() {
+    document.getElementById("upload").style.display = "block";
+}
+
+function closeLightbox() {
+    document.getElementById("upload").style.display = "none";
+}

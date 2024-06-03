@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="slidercontent.js" defer></script>
 
 </head>
@@ -23,7 +24,9 @@
     </header>
 
     <!--Lightbox zu Upload von Bildern-->
+    <a onclick="openLightbox()"><i class="material-icons">file_uploade</i></a>
     <div id="upload">
+        <button onclick="closeLightbox()">X</button>
         <form action="imageupload.php" method="POST" enctype="multipart/form-data">
             <label for="imageUpload">Select Image:</label><input type="file" name="imageUpload" id="imageUpload"
                 required><br>
@@ -32,12 +35,12 @@
                 name="imageDiscription" required><br>
             <fieldset>
                 <legend>Tags</legend>
-                <label for="illustration">illustration</label><input type="checkbox" id="illustration" name="tagselect"
+                <label for="illustration">illustration</label><input type="checkbox" id="illustration" name="illustration"
                     value="illustration">
-                <label for="3d">3d</label><input type="checkbox" id="3d" name="tagselect" value="3d">
-                <label for="digital">digital</label><input type="checkbox" id="digital" name="tagselect"
+                <label for="3d">3d</label><input type="checkbox" id="3d" name="3d" value="3d">
+                <label for="digital">digital</label><input type="checkbox" id="digital" name="digital"
                     value="digital">
-                <label for="traditional">traditional</label><input type="checkbox" id="traditional" name="tagselect"
+                <label for="traditional">traditional</label><input type="checkbox" id="traditional" name="traditional"
                     value="traditional">
             </fieldset>
             <input type="submit" value="Upload Image" name="submit">
@@ -69,7 +72,7 @@
         <a class="next" onclick="plusSlides(1)">next</a>
 
         <article id="projectinformation">
-            Informationen zu den Projekten
+            <h3 id ="projectinfoh3">Informationen zu den Projekten</h3>
         </article>
     </section>
 
