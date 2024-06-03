@@ -45,4 +45,6 @@ body {
 #upload fieldset {
     position: relative;
     width: 50%;
+    display: flex;
+    justify-content: flex-start;
 }
