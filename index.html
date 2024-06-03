@@ -14,6 +14,9 @@
 </head>
 
 <body onload="getjson()">
+
+    <!--Header-->
+
     <header>
         <h1>Philip Stefan Ahlers</h1>
         <nav>
@@ -24,7 +27,9 @@
     </header>
 
     <!--Lightbox zu Upload von Bildern-->
-    <a onclick="openLightbox()"><i class="material-icons">file_uploade</i></a>
+
+    <a onclick="openLightbox()"><i class="material-icons">file_uploade</i></a><!--Pasword abfrage-->
+
     <div id="upload">
         <button onclick="closeLightbox()">X</button>
         <form action="imageupload.php" method="POST" enctype="multipart/form-data">
@@ -49,7 +54,10 @@
 
     <section>
         <h2 id="projects">Projects</h2>
+
+
         <!--Filter-->
+
         <div id="Filtertags">
             <fieldset>
                 <legend>Select Filters</legend>
@@ -63,7 +71,10 @@
                     checked onchange="checkCheckboxes(this)">
             </fieldset>
         </div>
+
+
         <!--Slider-->
+
         <div id="SlideContainer">
 
         </div>
@@ -76,6 +87,9 @@
         </article>
     </section>
 
+
+    <!--About me-->
+
     <section>
         <h2 id="aboutme">About me</h2>
         <article>
@@ -83,10 +97,13 @@
         </article>
     </section>
 
+
+    <!--Contact-->
+
     <section>
         <h2 id="contact">Contact</h2>
         <article>
-            Kontaktformula
+            Kontaktformula <!--Emailform-->
         </article>
     </section>
 
