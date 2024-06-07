@@ -87,7 +87,7 @@ function showSlides(n, r) {
     for (let j = 0; j < slides.length; j++) {
         for (let i = 0; i < curentfilters.length; i++) {
             if (curentfilters[i].checked == true && slides[n].image.classList.contains(curentfilters[i].value)) {
-                    console.log(curentfilters[i].value);
+                    //console.log(curentfilters[i].value);
                     //display Sliedes
                     slides[n].image.style.display = "flex";
                     slides[n].infocontainer.style.display = "block";
