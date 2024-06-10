@@ -22,21 +22,20 @@ if (!in_array($imageFileType, array("jpg", "png", "jpeg", "gif", "avif"))) {
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
+  // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["imageUpload"]["tmp_name"], $target_file)) {
-    echo "The file ". htmlspecialchars(basename($_FILES["imageUpload"]["name"])). " has been uploaded.";
+    echo "The file " . htmlspecialchars(basename($_FILES["imageUpload"]["name"])) . " has been uploaded.";
 
     //edit json
 
     $jsonString = file_get_contents("Content/Slidercontent/images.json");
     $jsondata = json_decode($jsonString, true);
     //new object in json file
-    $jsondata["images"][] = ["imagelocation" => $target_file, "Date" => $_POST["imageDate"], "Discription" => $_POST["imageDiscription"], "tags" => ["illustration" => $_POST["illustration"],"3d" => $_POST["3d"],"digital" => $_POST["digital"], "tradtional" => $_POST["traditional"]]];
+    $jsondata["images"][] = ["imagelocation" => $target_file, "Date" => $_POST["imageDate"], "Discription" => $_POST["imageDiscription"], "tags" => ["illustration" => $_POST["illustration"], "3d" => $_POST["3d"], "digital" => $_POST["digital"], "tradtional" => $_POST["traditional"]]];
 
     $newjsonString = json_encode($jsondata);
     file_put_contents("Content/Slidercontent/images.json", $newjsonString);
-
   } else {
     echo "Sorry, there was an error uploading your file.";
   }
@@ -46,5 +45,3 @@ if ($uploadOk == 0) {
 
 header("Location: index.html");
 exit;
-
-?>
