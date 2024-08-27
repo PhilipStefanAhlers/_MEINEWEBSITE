@@ -50,8 +50,7 @@ const slides = [];
 var slideindex = 0;
 
 //slide loading slidecontent
-
-//json versuch
+//json laden
 
 function getjson() {
 
@@ -104,7 +103,7 @@ function showSlides(n, r) {
     }
 }
 
-
+//check if at least one filter is checked
 function checkCheckboxes(clickedCheckbox) {
     var checkboxes = document.getElementById("Filtertags").querySelectorAll("input");
     
@@ -123,7 +122,7 @@ function checkCheckboxes(clickedCheckbox) {
 }
 
 
-
+//Upload Lightbox
 function openLightbox() {
     document.getElementById("upload").style.display = "block";
 }
@@ -131,3 +130,5 @@ function openLightbox() {
 function closeLightbox() {
     document.getElementById("upload").style.display = "none";
 }
+
+//choose if what content to upload

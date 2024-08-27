@@ -58,3 +58,8 @@ body {
     height: 30rem;
 }
 
+section {
+    display: flex;
+    align-content: center;
+    
+}
