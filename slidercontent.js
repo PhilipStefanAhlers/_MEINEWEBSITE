@@ -124,11 +124,20 @@ function checkCheckboxes(clickedCheckbox) {
 
 //Upload Lightbox
 function openLightbox() {
-    document.getElementById("upload").style.display = "block";
+    document.getElementById("upload").style.display = "flex";
 }
 
 function closeLightbox() {
     document.getElementById("upload").style.display = "none";
 }
 
-//choose if what content to upload
+var prevScrollpos = window.scrollY;
+window.onscroll = function() {
+var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("hide-header").style.top = "0";
+  } else {
+    document.getElementById("hide-header").style.top = "-10rem";
+  }
+  prevScrollpos = currentScrollPos;
+}

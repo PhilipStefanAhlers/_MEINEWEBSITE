@@ -17,20 +17,19 @@
 
     <!--Header-->
 
-    <header>
-        <h1>Philip Stefan Ahlers</h1>
+    <header id="hide-header">
+        <h1><a href="index.html">Philip Stefan Ahlers</a></h1>
         <nav>
             <a href="index.html#projects">Projekts</a>
             <a href="index.html#aboutme">About me</a>
             <a href="index.html#contact">Contact</a>
+            <a onclick="openLightbox()" class="selectDisable" ><i class="material-icons selectDisable">file_uploade</i></a><!--Pasword abfrage-->
         </nav>
     </header>
 
     <!--Lightbox zu Upload von Bildern-->
 
-    <a onclick="openLightbox()" class="selectDisable" ><i class="material-icons selectDisable">file_uploade</i></a><!--Pasword abfrage-->
-
-    <div id="upload">
+    <section id="upload">
         <button onclick="closeLightbox()">X</button>
         <form action="imageupload.php" method="POST" enctype="multipart/form-data">
             
@@ -51,15 +50,23 @@
             </fieldset>
             <input type="submit" value="Upload Image" name="submit">
         </form>
-    </div>
+    </section>
 
     <section>
         <h2 id="projects">Projects</h2>
 
+        <!--Slider-->
 
-        <!--Filter-->
+        <div id="SlideContainer">
 
-        <div id="Filtertags">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)"><i class="material-icons" style="font-size: 5rem;">navigate_before</i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="material-icons" style="font-size: 5rem;">navigate_next</i></a>
+
+         <!--Filter-->
+
+         <div id="Filtertags">
             <fieldset>
                 <legend>Select Filters</legend>
                 <label for="illustration">Illustration:</label> <input type="checkbox" id="illustration"
@@ -72,16 +79,6 @@
                     checked onchange="checkCheckboxes(this)">
             </fieldset>
         </div>
-
-
-        <!--Slider-->
-
-        <div id="SlideContainer">
-
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">prev</a>
-        <a class="next" onclick="plusSlides(1)">next</a>
 
         <article id="projectinformation">
             <h3 id ="projectinfoh3">Informationen zu den Projekten</h3>
@@ -108,11 +105,10 @@
             
             <!--Emailform-->
 
-            Kontaktformula 
             <form action="email.php" method="POST">
                 <label for="Email">Email:</label><input type="text" id="Email" name="Email" required></label><br>
                 <label for="Subject">Subject:</label><input type="text" id="Subject" name="Subject" required></label><br>
-                <label for="Message">Message:</label><input type="text" id="Message" name="Message" required></label><br>
+                <label for="Message">Message:</label><textarea id="Message" name="Message" rows="10" cols="30"></textarea></label><br>
                 <input type="submit" value="Submit">
             </form>
         </article>
