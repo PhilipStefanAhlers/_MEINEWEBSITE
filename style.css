@@ -48,10 +48,13 @@ h1 {
 h2 {
     font-size: 2rem;
     margin: 0.5rem;
+    font-weight: 300;
 }
 
 h3 {
     font-size: 1.5rem;
+    font-weight: 300;
+
 }
 
 header {
@@ -148,6 +151,13 @@ textarea {
 
 fieldset {
     box-shadow: black 0px 0px 10px;
+    border: var(--mustard) 5px solid;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: baseline;
+
 }
 
 input{
@@ -268,6 +278,21 @@ footer {
     color: var(--white);
     padding: 1rem;
     box-shadow: black 0px 0px 10px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.impressum {
+    margin: 2% 5%;
 }
 
 /* Media Queries */
