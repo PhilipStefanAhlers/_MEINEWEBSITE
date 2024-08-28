@@ -137,7 +137,7 @@ var currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("hide-header").style.top = "0";
   } else {
-    document.getElementById("hide-header").style.top = "-10rem";
+    document.getElementById("hide-header").style.top = "-50rem";
   }
   prevScrollpos = currentScrollPos;
 }
