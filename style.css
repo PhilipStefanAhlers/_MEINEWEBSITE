@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 :root {
     --mustard: #FFB100;
     --darkmustard: #dda114;
     --green: #48a75c;
-    --darkred: #321e17;
+    --darkgreen: #2d5c3b;
+    --darkred: #321d17;
     --white: #FFFFFF;
 }
 
@@ -11,6 +16,9 @@ body {
     box-sizing: border-box;
     background-color: var(--darkred);
     color: var(--white);
+    
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
 }
 
 a {
@@ -24,6 +32,10 @@ a {
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+h1, h2, h3 {
+    font-family: "New Amsterdam", sans-serif;
 }
 
 h1 {
@@ -43,6 +55,7 @@ h3 {
 
 header {
     position: sticky;
+    z-index: 1;
     top: 0%;
     display: flex;
     justify-content: space-between;
@@ -51,6 +64,7 @@ header {
     color: rgb(255, 255, 255);
     padding: 1rem;
     flex-wrap: nowrap;
+    box-shadow: black 0px 0px 10px;
 }
 
 #hide-header {
@@ -78,7 +92,7 @@ nav a:hover {
     display: none;
     align-items:start;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     padding: 10%;
     top: 0%;
     width: 100%;
@@ -93,7 +107,6 @@ nav a:hover {
 
 #upload fieldset {
     display: flex;
-    flex-direction: column; /* Bei kleineren Bildschirmgrößen auf Spaltenlayout wechseln */
     gap: 1rem;
 }
 
@@ -116,6 +129,10 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+input [type="submit"]:hover {
+    background-color: var(--darkgreen);
+}
+
 textarea {
     width: 100%;
     height: 150px;
@@ -128,10 +145,25 @@ textarea {
     resize: none;
 }
 
-#slidecontainer {
+fieldset {
+    box-shadow: black 0px 0px 10px;
+}
+
+input{
+    box-shadow: black 0px 0px 10px;
+}
+
+.video_container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    position: relative;
+}
+
+iframe {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    box-shadow: black 0px 0px 10px;
 }
 
 .slideimage {
@@ -139,17 +171,18 @@ textarea {
     height: 50rem;
     max-width: 100vw;
     object-fit: contain;
+
 }
 
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
     padding: 16px;
     color: white;
     font-weight: bold;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.286);
+    box-shadow: black 0px 0px 10px;
 }
 
 .prev {
@@ -168,12 +201,18 @@ section {
     padding: 1rem;
 }
 
+hr {
+    border: 3px solid var(--mustard);
+    box-shadow: black 0px 0px 10px;
+}
+
 footer {
     display: flex;
     justify-content: center;
     background-color: var(--mustard);
     color: var(--white);
     padding: 1rem;
+    box-shadow: black 0px 0px 10px;
 }
 
 /* Media Queries */
@@ -208,7 +247,6 @@ footer {
     }
 
     .prev, .next {
-        top: 45%;
         padding: 12px;
     }
 }
@@ -257,9 +295,8 @@ footer {
     }
 
     .prev, .next {
-        top: 40%;
         padding: 8px;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -268,6 +305,11 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
         flex-wrap: wrap;
+    }
+
+    .prev, .next {
+        padding: 6px;
+        font-size: 0.3rem;
     }
 
 }
